@@ -5,13 +5,15 @@
 
 typedef struct {
   int minus;
+  int plus;
+  int space;
+  int zero;
   int width;
-  int precision;  // СКОЛЬКО символов максимум взять (или -1 = не ограничивать)
-  char spec;      // например 's'
+  int precision;
+  char length;
+  char spec;
 } s21_fmt_t;
 
 int s21_sprintf(char *str, const char *format, ...);
-
-void s21_parse_fmt(const char *format, int *i, s21_fmt_t *fmt);
 
 #endif  // S21_STRING_H_
